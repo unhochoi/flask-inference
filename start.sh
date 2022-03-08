@@ -11,9 +11,9 @@ virtualenv venv
 . venv/bin/activate
 
 # 가상 환경 내부에 필요 패키지 다운로드
-pip3 install -r /flask-inference/requirements.txt
+pip3 install -r /home/hadoop/flask-inference/requirements.txt
 
 # Flask Application 실행
-sudo cp /flask-inference/main.service /etc/systemd/system/
+sudo cp /home/hadoop/flask-inference/main.service /etc/systemd/system/
 sudo systemctl start main
 sudo systemctl enable main
