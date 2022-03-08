@@ -25,3 +25,9 @@
   ```
   curl http://127.0.0.1:80/ 
   ```
+
+- main.py 는 수정에 따라 실시간으로 반영됨
+
+  ```
+  vi /home/hadoop/flask-inference/main.py
+  ```
