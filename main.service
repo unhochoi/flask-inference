@@ -8,13 +8,13 @@ After=network.target
 User=root
 
 # Service 구동 시, 사용하는 환경 변수의 경로
-Environment="PATH=/home/flask-inference/venv/bin"
+Environment="PATH=/home/hadoop/flask-inference/venv/bin"
 
 # Service 구동 시, 실행할 구문
-ExecStart=/home/flask-inference/venv/bin/python main.py
+ExecStart=/home/hadoop/flask-inference/venv/bin/python main.py
 
 # ExecStart 가 구동되는 경로
-WorkingDirectory=/home/flask-inference/
+WorkingDirectory=/home/hadoop/flask-inference/
 
 Restart=always
 
