@@ -13,5 +13,5 @@ cd flask-inference
 
 - 구동 중인 Inference Application 에 Request
 ```
-curl http://127.0.0.1:5000/ 
+curl http://127.0.0.1:80/ 
 ```
