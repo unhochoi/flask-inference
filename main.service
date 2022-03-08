@@ -1,0 +1,15 @@
+# 실행할 Python Application 설정
+
+[Unit]
+Description=myapp
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/home/flask-inference/
+Environment="PATH=/home/flask-inference/venv/bin"
+ExecStart=/home/flask-inference/venv/bin/python main.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
