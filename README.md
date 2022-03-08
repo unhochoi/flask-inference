@@ -15,6 +15,11 @@
   
   ./flask-inference/start.sh
   ```
+- main.service 구동 확인
+
+  ```
+  systemctl status main.service.
+  ```
 
 - 구동 중인 Inference Application 에 Request
   ```
