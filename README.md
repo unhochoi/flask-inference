@@ -6,10 +6,13 @@
   ```
   cd /home/hadoop
   sudo yum install git -y
+  
   # flask inference application 관련 repository
   git clone https://github.com/unhochoi/flask-inference.git
+  
   # model 및 scaler 관련 repository
   git clone https://github.com/kmu-bigdata/dos.git
+  
   ./flask-inference/start.sh
   ```
 
