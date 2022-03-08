@@ -10,3 +10,8 @@ git clone https://github.com/unhochoi/flask-inference.git
 cd flask-inference
 ./start.sh
 ```
+
+- 구동 중인 Inference Application 에 Request
+```
+curl http://127.0.0.1:5000/ 
+```
