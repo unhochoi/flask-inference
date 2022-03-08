@@ -23,7 +23,18 @@
 
 - 구동 중인 Inference Application 에 Request
   ```
-  curl http://127.0.0.1:80/ 
+  curl \
+  -H "Content-Type: application/json" \
+  -X POST "http://127.0.0.1:80/" \
+  -d '{
+    "lr": 97366,
+    "lc": 33288,
+    "rc": 5958,
+    "ld": 0.00056263,
+    "rd": 0.13,
+    "lnnz": 1823595,
+    "rnnz": 25785518
+  }' 
   ```
 
 - main.py 는 수정에 따라 실시간으로 반영됨
