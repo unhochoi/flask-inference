@@ -1,4 +1,4 @@
-# 실행할 Python Application 설정
+# 실행할 Python Application 의 Service 설정
 
 [Unit]
 Description=myapp
@@ -6,9 +6,16 @@ After=network.target
 
 [Service]
 User=root
-WorkingDirectory=/home/flask-inference/
+
+# Service 구동 시, 사용하는 환경 변수의 경로
 Environment="PATH=/home/flask-inference/venv/bin"
+
+# Service 구동 시, 실행할 구문
 ExecStart=/home/flask-inference/venv/bin/python main.py
+
+# ExecStart 가 구동되는 경로
+WorkingDirectory=/home/flask-inference/
+
 Restart=always
 
 [Install]
