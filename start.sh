@@ -2,7 +2,6 @@
 
 # 필요 패키지 다운로드
 sudo yum update -y
-sudo yum install git -y
 sudo yum install python3-pip -y
 sudo pip3 install virtualenv
 
