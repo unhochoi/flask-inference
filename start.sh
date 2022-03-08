@@ -6,11 +6,6 @@ sudo yum install git -y
 sudo yum install python3-pip -y
 sudo pip3 install virtualenv
 
-# Git Clone 및 접근
-cd ~
-git clone https://github.com/unhochoi/flask-inference.git
-cd flask-inference
-
 # venv 라는 이름의 가상 환경 생성
 virtualenv venv
 # venv 가상 환경 활성화
