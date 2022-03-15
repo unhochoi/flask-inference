@@ -10,6 +10,9 @@ sudo virtualenv venv
 # venv 가상 환경 활성화
 . venv/bin/activate
 
+python -m pip install --upgrade pip
+pip install example --use-feature=2020-resolver
+
 # 가상 환경 내부에 필요 패키지 다운로드
 pip3 install -r /home/hadoop/flask-inference/requirements.txt
 
