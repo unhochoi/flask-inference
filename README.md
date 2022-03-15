@@ -3,6 +3,10 @@
 - AWS EMR 의 Worker 노드에, Flask 기반의 Inference Application 구동
 
   ```
+  
+  # 루트를 사용하여 설치 진행
+  sudo su -
+
   cd /home/hadoop
   sudo yum install git -y
   
