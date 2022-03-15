@@ -14,7 +14,7 @@ Environment="PATH=/home/hadoop/venv/bin"
 ExecStart=/home/hadoop/venv/bin/python main.py
 
 # ExecStart 가 구동되는 경로 (실제 실행 파일이 존재하는 경로)
-WorkingDirectory=/home/hadoop/flask-inference/
+WorkingDirectory=/home/hadoop/flask-inference-in-emr/
 
 Restart=always
 
