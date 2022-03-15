@@ -1,11 +1,11 @@
 #!/bin/bash
 
-sudo su -
-
 # 필요 패키지 다운로드
 sudo yum update -y
 sudo yum install python3-pip -y
 sudo pip3 install virtualenv
+
+sudo su -
 
 # venv 라는 이름의 가상 환경 생성
 sudo virtualenv venv
