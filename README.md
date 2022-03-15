@@ -8,12 +8,12 @@
   sudo yum install git -y
   
   # flask inference application 관련 repository
-  sudo git clone https://github.com/unhochoi/flask-inference.git
+  sudo git clone https://github.com/unhochoi/flask-inference-in-emr.git
   
   # model 및 scaler 관련 repository
   sudo git clone https://github.com/kmu-bigdata/dos.git
   
-  ./flask-inference/start.sh
+  ./flask-inference-in-emr/start.sh
   ```
 - main.service 구동 확인
 
@@ -40,5 +40,5 @@
 - main.py 는 수정에 따라 실시간으로 반영됨
 
   ```
-  vi /home/hadoop/flask-inference/main.py
+  vi /home/hadoop/flask-inference-in-emr/main.py
   ```
