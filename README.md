@@ -8,13 +8,13 @@
   sudo su -
 
   cd /home/hadoop
-  sudo yum install git -y
+  yum install git -y
   
   # flask inference application 관련 repository
-  sudo git clone https://github.com/unhochoi/flask-inference-in-emr.git
+  git clone https://github.com/unhochoi/flask-inference-in-emr.git
   
   # model 및 scaler 관련 repository
-  sudo git clone https://github.com/kmu-bigdata/dos.git
+  git clone https://github.com/kmu-bigdata/dos.git
   
   ./flask-inference-in-emr/start.sh
   ```
