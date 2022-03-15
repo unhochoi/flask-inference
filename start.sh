@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo su -
+
 # 필요 패키지 다운로드
 sudo yum update -y
 sudo yum install python3-pip -y
