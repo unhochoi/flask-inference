@@ -12,12 +12,12 @@ sudo virtualenv venv
 # venv 가상 환경 활성화
 . venv/bin/activate
 
-python -m pip install --upgrade pip
+#python -m pip install --upgrade pip
 
 # 가상 환경 내부에 필요 패키지 다운로드
 pip3 install -r /home/hadoop/flask-inference-in-emr/requirements.txt
 
-pip3 install tensorflow==2.5.0 --use-feature=2020-resolver
+#pip3 install tensorflow==2.5.0 --use-feature=2020-resolver
 
 # Flask Application 실행
 sudo cp /home/hadoop/flask-inference-in-emr/main.service /etc/systemd/system/
