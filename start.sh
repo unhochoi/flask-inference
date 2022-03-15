@@ -6,6 +6,7 @@ sudo yum install python3-pip -y
 sudo pip3 install virtualenv
 
 sudo su -
+cd /home/hadoop
 
 # venv 라는 이름의 가상 환경 생성
 sudo virtualenv venv
