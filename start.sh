@@ -21,3 +21,4 @@ sudo pip3 install tensorflow==2.5.0 --use-feature=2020-resolver
 cp /home/hadoop/flask-inference-in-emr/main.service /etc/systemd/system/
 systemctl start main
 systemctl enable main
+systemctl status main
