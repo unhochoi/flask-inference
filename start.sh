@@ -1,13 +1,13 @@
 #!/bin/bash
 
+# 루트를 사용하여 설치 진행
+sudo su -
+cd /home/hadoop
+
 # 필요 패키지 다운로드
 sudo yum update -y
 sudo yum install python3-pip -y
 sudo pip3 install virtualenv
-
-# 루트를 사용하여 설치 진행
-sudo su -
-cd /home/hadoop
 
 # venv 라는 이름의 가상 환경 생성
 sudo virtualenv venv
