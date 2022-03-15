@@ -6,7 +6,7 @@ sudo yum install python3-pip -y
 sudo pip3 install virtualenv
 
 # venv 라는 이름의 가상 환경 생성
-virtualenv venv
+sudo virtualenv venv
 # venv 가상 환경 활성화
 . venv/bin/activate
 
