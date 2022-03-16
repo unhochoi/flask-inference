@@ -27,7 +27,7 @@
   ```
   curl \
   -H "Content-Type: application/json" \
-  -X POST "http://마스터퍼블릭DNS:80/" \
+  -X POST "http://localhost:80/" \
   -d '{
     "lr": 97366,
     "lc": 33288,
