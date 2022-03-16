@@ -16,6 +16,7 @@
   git clone https://github.com/kmu-bigdata/dos.git
   
   ./flask-inference-in-emr/start.sh
+  
   ```
 - main.service 구동 확인
 
