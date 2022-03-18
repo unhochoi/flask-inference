@@ -112,7 +112,7 @@ def inference():
     else:
         optim_method = "smsm"
 
-    result = result = "load_model_time(ms):" + str(int(load_model_time*1000)) + "\preprocess_data_time(ms):" + str(int(preprocess_data_time*1000)) + "\model_predict_time(ms) : " + str(int(model_predict_time*1000)) + "\\result:" + str(optim_method) 
+    result = "load_model_time(ms):" + str(int(load_model_time*1000)) + "\preprocess_data_time(ms):" + str(int(preprocess_data_time*1000)) + "\model_predict_time(ms) : " + str(int(model_predict_time*1000)) + "\\result:" + str(optim_method) 
 
     return result
 
