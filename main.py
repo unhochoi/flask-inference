@@ -113,12 +113,9 @@ def inference():
 		optim_method = "smsm"
 
 	# Generate result
-	result = "load_model_time(ms) : " + str(load_model_time) + \
-		"preprocess_data_time(ms) : " + str(preprocess_data_time) + \
-		"model_predict_time(ms) : " + str(model_predict_time) + \
-		"result : " + str(optim_method)
+	result = "load_model_time(ms) : " + str(load_model_time) + "preprocess_data_time(ms) : " + str(preprocess_data_time) + "model_predict_time(ms) : " + str(model_predict_time) + "result : " + str(optim_method)
 
-	retrun result
+	retrun "hello"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80 ,debug=True)
