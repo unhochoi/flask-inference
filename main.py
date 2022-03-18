@@ -74,51 +74,51 @@ app = Flask(__name__)
 
 @app.route('/', methods=['POST'])
 def inference():
-	    
-		start = time.time()
+	
+	start = time.time()
 
-		# request를 json 형식으로 변수에 할당
-    param = request.get_json()
+	# request를 json 형식으로 변수에 할당
+	param = request.get_json()
 
-    # Preprocess features from events
-    lr = param["lr"]
-    lc = param["lc"]
-    rc = param["rc"]
-    ld = param["ld"]
-    rd = param["rd"]
-    lnnz = param["lnnz"]
-    rnnz = param["rnnz"]
+	# Preprocess features from events
+	lr = param["lr"]
+	lc = param["lc"]
+	rc = param["rc"]
+	ld = param["ld"]
+	rd = param["rd"]
+	lnnz = param["lnnz"]
+	rnnz = param["rnnz"]
 
-    # Create input feature to use as model input
-    input_feature = np.array([[lr,lc,rc,ld,rd,lnnz,rnnz]])
-    
-    # Apply minmax scaler to input_feature
-    input_feature_scaler = minmax_scaler.transform(input_feature)
+	# Create input feature to use as model input
+	input_feature = np.array([[lr,lc,rc,ld,rd,lnnz,rnnz]])
 
-		preprocess_data_time = time.time() - start
+	# Apply minmax scaler to input_feature
+	input_feature_scaler = minmax_scaler.transform(input_feature)
 
-		start = time.time()
+	preprocess_data_time = time.time() - start
 
-    # Generate model-specific predictions for input feature
-    smsm_dnn_result = smsm_dnn_model.predict(input_feature_scaler)
-    smdm_dnn_result = smdm_dnn_model.predict(input_feature_scaler)
+	start = time.time()
 
-		model_predict_time = time.time() - start
+	# Generate model-specific predictions for input feature
+	smsm_dnn_result = smsm_dnn_model.predict(input_feature_scaler)
+	smdm_dnn_result = smdm_dnn_model.predict(input_feature_scaler)
 
-		# If sm*dm is better than sm*sm
-    if (smdm_dnn_result[0] <= smsm_dnn_result[0]):
-        optim_method = "smdm"
-    # If sm*sm is better than sm*dm
-    else:
-        optim_method = "smsm"
+	model_predict_time = time.time() - start
 
-		# Generate result
-		result = "load_model_time(ms) : " + str(load_model_time) + \
-							"preprocess_data_time(ms) : " + str(preprocess_data_time) + \
-							"model_predict_time(ms) : " + str(model_predict_time) + \
-							"result : " + str(optim_method)
-		
-		retrun result
+	# If sm*dm is better than sm*sm
+	if (smdm_dnn_result[0] <= smsm_dnn_result[0]):
+		optim_method = "smdm"
+	# If sm*sm is better than sm*dm
+	else:
+		optim_method = "smsm"
+
+	# Generate result
+	result = "load_model_time(ms) : " + str(load_model_time) + \
+		"preprocess_data_time(ms) : " + str(preprocess_data_time) + \
+		"model_predict_time(ms) : " + str(model_predict_time) + \
+		"result : " + str(optim_method)
+
+	retrun result
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80 ,debug=True)
